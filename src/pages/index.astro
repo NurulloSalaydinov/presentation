@@ -1,0 +1,404 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Presentation</title>
+    <link rel="stylesheet" href="/reveal/reveal.css" />
+    <link rel="stylesheet" href="/reveal/theme/simple.css" id="theme" />
+    <link rel="stylesheet" href="/reveal/plugin/highlight/monokai.css" />
+    <style>
+    /* Global Slide Styling */
+body, .reveal {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reveal .slides section {
+  width: 100% !important;
+  height: 100vh !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Title Slide Styling */
+.title-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      widht: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.title-layer {
+    text-align: center;
+    animation: fadeIn 2s ease;
+    color: #f1f1f1;
+}
+
+.title-layer h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    animation: slideInFromLeft 1.5s ease;
+}
+
+.title-layer h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: #d1d5db;
+}
+
+.title-layer .author {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #fef3c7;
+    animation: fadeIn 3s ease-in;
+}
+
+/* Content Slide Styling */
+.content-slide {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+}
+
+.text-block {
+    width: 40%;
+    text-align: left;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.text-block h2 {
+    font-size: 3.2rem;
+    color: #1d4ed8;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    animation: bounceIn 1.5s ease;
+}
+
+.text-block p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #e5e7eb;
+}
+
+.image-block {
+    width: 50%;
+    animation: fadeInZoom 2s ease forwards;
+}
+
+.image-block img {
+    min-width: 600px;
+    max-width: 100%;
+    border-radius: 15px;
+    margin-top: -10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease;
+}
+
+.image-block img:hover {
+    transform: scale(1.08);
+}
+
+/* Closing Slide */
+.closing-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh!important;
+    widht: 100%;
+    color: #fff;
+}
+
+.closing-slide h2 {
+    color: yellow;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    animation: fadeInDown 2s ease;
+}
+
+.closing-slide p {
+    font-size: 1.3rem;
+    color: #fef3c7;
+    display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes fadeInZoom {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+  </style>
+  </head>
+  <body>
+     <div class="reveal">
+    <div class="slides">
+<!-- Title Slide with Layered Background -->
+        <section class="title-slide">
+            <div class="title-layer">
+                <h1 style="color: yellow;margin-top: 100px">Gyeongju: The Heart of Korean Heritage</h1>
+                <br>
+                <h3>Exploring the Cultural Treasures of Korea's Ancient Capital</h3>
+                <p class="author">Presented by Nurulloh & Abdulloh</p>
+            </div>
+        </section>
+
+        <section data-transition="slide" data-speech-next="modern">
+    <div class="slide-content">
+        <h2 style="color: yellow;font-size: 1.2em; font-weight: bold">Modern Gyeongju: Population & Tourism Highlights</h2>
+        <div class="info-section">
+            <div class="info-card">
+                <h3>1. Population</h3>
+                <p><strong>Current Population</strong>: Approximately 260,000 residents.</p>
+                <p><strong>Demographics</strong>: Primarily Korean, with a growing international community due to tourism and educational exchange programs.</p>
+            </div>
+            <div class="info-card">
+                <h3>2. Tourism Statistics</h3>
+                <p><strong>Annual Visitors</strong>: Over 6 million tourists visit Gyeongju each year.</p>
+                <p><strong>Peak Seasons</strong>: Cherry blossom season (April) and autumn (October) attract the most visitors, especially to sites like Anapji Pond and Bulguksa Temple.</p>
+            </div>
+            <div class="info-card">
+                <h3>3. Tourism Highlights</h3>
+                <p><strong>UNESCO World Heritage Sites</strong>: Gyeongju Historic Areas, Seokguram Grotto, and Bulguksa Temple draw history enthusiasts.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .slide-content {
+        text-align: center;
+        color: #fff;
+    }
+
+    .info-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .info-card {
+        background: #f7f7f7;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        width: 250px;
+    }
+
+    .info-card h3 {
+        font-size: .8em !important;
+        font-weight: bold;
+        color: #2980b9;
+        margin-bottom: 0.5rem;
+    }
+
+    .info-card p {
+        font-size: .6em;
+        color: #555;
+        line-height: 1.4em;
+        margin-bottom: 0.5rem;
+    }
+</style>
+
+
+        <!-- Content Slide: Bulguksa Temple -->
+        <section>
+            <div class="content-slide" data-speech-next="temple">
+                <!-- Animated Text Block -->
+                <div class="text-block">
+                    <h2>Bulguksa Temple</h2>
+                    <p>Built in the 8th century, Bulguksa is a Silla Dynasty masterpiece symbolizing peace and harmony.</p>
+                </div>
+                <!-- Layered Image with Motion Effect -->
+                <div class="image-block">
+                    <img src="https://www.korea-roads.fr/wp-content/uploads/2020/05/South-Korea-Gyeongju-Bulguksa-Temple-1.jpg" alt="Bulguksa Temple">
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Slide: Anapji Pond -->
+        <section data-speech-next="pond">
+            <div class="content-slide">
+                <div class="text-block">
+                    <h2>Anapji Pond</h2>
+                    <p>Created in 674 CE, Anapji Pond was designed as a royal garden embodying a paradise on earth.</p>
+                </div>
+                <div class="image-block">
+                    <img src="https://thisiskoreatours.com/wp-content/uploads/2017/03/Anapji-Pond.jpg" alt="Anapji Pond">
+                </div>
+            </div>
+        </section>
+
+        <!-- Closing Slide with Call to Action -->
+        <section class="closing-slide" data-speech-next="end">
+            <h2>Thank You!</h2>
+        </section>
+    </div>
+  </div>
+    <script is:inline src="/reveal/reveal.js"></script>
+    <script is:inline src="/reveal/plugin/markdown/markdown.js"></script>
+    <script is:inline src="/reveal/plugin/highlight/highlight.js"></script>
+    <script is:inline src="/reveal/plugin/notes/notes.js"></script>
+    <script is:inline src="/reveal/plugin/speech/speech.js"></script>
+
+    <script>
+      Reveal.initialize({
+        controls: false,
+        progress: false,
+        history: true,
+        slideNumber: true,
+        transition: 'slide',
+        transitionSpeed: 'fast',
+        center: true,
+        dependencies: [{
+        src: "plugin/speech/speech.js",
+        callback: function() {
+          RevealSpeech.configure({
+            nextKeyword: 'next',     // default gotonext
+            prevKeyword: 'previous', // default gotoprevious
+            lastKeyword: 'last',     // default gotolast
+            firstKeyword: 'first',   // default gotofirst
+            debug: true,                  // default false
+          });
+        }
+      }]
+      })
+    //   const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    // const analyser = audioContext.createAnalyser();
+
+    // // Access the microphone
+    // navigator.mediaDevices.getUserMedia({ audio: true })
+    //   .then(stream => {
+    //     const source = audioContext.createMediaStreamSource(stream);
+    //     source.connect(analyser);
+    //     console.log(source)
+
+    //     analyser.fftSize = 256;  // Set the FFT size for frequency data
+    //     const bufferLength = analyser.frequencyBinCount;
+    //     const dataArray = new Uint8Array(bufferLength);
+
+    //     let lastClapTime = 0;  // To prevent multiple triggers within short time
+    //     const clapThreshold = 100;  // Adjust based on the microphone's sensitivity
+    //     const debounceTime = 2000;  // 2 seconds to wait between claps
+
+    //     // Function to analyze audio and detect a clap
+    //     function detectClap() {
+    //       analyser.getByteFrequencyData(dataArray);
+
+    //       // Calculate the average volume
+    //       let total = 0;
+    //       for (let i = 0; i < bufferLength; i++) {
+    //         total += dataArray[i];
+    //       }
+    //       const average = total / bufferLength;
+
+    //       // Check if the sound exceeds the threshold (indicating a potential clap)
+    //       if (average > clapThreshold && Date.now() - lastClapTime > debounceTime) {
+    //         lastClapTime = Date.now();
+    //         console.log('Clap detected!');
+            
+    //         // Trigger Reveal.js to go to the next slide
+    //         Reveal.next();
+    //       }
+
+    //       // Keep checking for sound
+    //       requestAnimationFrame(detectClap);
+    //     }
+
+    //     // Event listener to start audio context after a user gesture (e.g., click)
+    //     document.body.addEventListener('click', function() {
+    //       if (audioContext.state === 'suspended') {
+    //         audioContext.resume();
+    //         console.log('AudioContext resumed after user gesture.');
+    //       }
+    //     });
+
+    //     // Start detecting sounds after the user interaction
+    //     detectClap();
+    //   })
+    //   .catch(err => {
+    //     console.error('Error accessing microphone:', err);
+    //   });
+    </script>
+  </body>
+</html>
+<style is:global>
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background: #13151a;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+</style>
